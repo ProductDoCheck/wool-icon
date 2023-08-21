@@ -1,0 +1,34 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const UVisualStudio = props => {
+  const { color, size, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...otherProps}
+    >
+      <path d="M16.85 2L9.09 9.77l-4.9-3.86L2.05 7v10l2.15 1.09 4.93-3.85L16.87 22 22 19.93V4l-5.15-2zM4.37 14.3V9.65l2.44 2.43-2.44 2.22zm12.33 1.29L12.05 12l4.65-3.59v7.18z"></path>
+    </svg>
+  );
+};
+
+UVisualStudio.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+};
+
+UVisualStudio.defaultProps = {
+  color: 'currentColor',
+  size: '24'
+};
+
+export default UVisualStudio;
