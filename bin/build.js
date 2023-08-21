@@ -5,7 +5,6 @@ const fs = require('fs')
 const format = require('prettier-eslint')
 const processSvg = require('./processSvg')
 const { parseName } = require('./utils')
-const defaultStyle = process.env.npm_package_config_style || 'stroke'
 const { getAttrs, getElementCode } = require('./template')
 const icons = require('../src/data.json')
 
@@ -60,6 +59,9 @@ const attrsToString = (attrs, style) => {
 
 // generate icon code separately
 const generateIconCode = async ({name}) => {
+  const defaultStyle = (name.startsWith("Fi") || name.startsWith("Outline")) ? "stroke" :
+                       (name.startsWith("U") || name.startsWith("Bold")) ? "fill" : 
+                       process.env.npm_package_config_style || 'stroke'
   const names = parseName(name, defaultStyle)
   console.log(names)
   const location = path.join(rootDir, 'src/svg', `${names.name}.svg`)
