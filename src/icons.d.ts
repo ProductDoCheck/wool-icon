@@ -3,6 +3,7 @@
 
   interface Props extends SVGAttributes<SVGElement> {
     color?: string;
+    /** default is 24px */
     size?: string | number;
   }
 
