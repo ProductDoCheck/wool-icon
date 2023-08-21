@@ -1,5 +1,5 @@
 {
-  "name": "wool-icon",
+  "name": "doCheck/wool-icon",
   "version": "0.0.2",
   "description": "Wool icon automation workflow with Figma",
   "main": "dist/wool-react-icon.cjs.js",
