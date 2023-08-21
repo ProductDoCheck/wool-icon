@@ -1,6 +1,6 @@
 {
   "name": "wool-icon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wool icon automation workflow with Figma",
   "main": "dist/wool-react-icon.cjs.js",
   "module": "dist/wool-react-icon.esm.js",
