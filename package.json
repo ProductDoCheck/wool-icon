@@ -1,6 +1,6 @@
 {
   "name": "docheck-wool-icon",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Wool icon automation workflow with Figma",
   "main": "dist/wool-react-icon.cjs.js",
   "module": "dist/wool-react-icon.esm.js",
@@ -31,7 +31,7 @@
     "build": "rollup -c ./build/rollup.config.prod.js"
   },
   "config": {
-    "style": "stroke"
+    "style": "fill"
   },
   "license": "MIT",
   "dependencies": {
