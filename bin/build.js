@@ -59,8 +59,8 @@ const attrsToString = (attrs, style) => {
 
 // generate icon code separately
 const generateIconCode = async ({name}) => {
-  const defaultStyle = (name.startsWith("fi") || name.toLowerCase().startsWith("outline")) ? "stroke" :
-                       (name.startsWith("u") || name.toLowerCase().startsWith("bold")) ? "fill" : 
+  const defaultStyle = name.startsWith("fi") ? "stroke" :
+                       (name.startsWith("u") || name.startsWith("bold") || name.startsWith("outline")) ? "fill" : 
                        process.env.npm_package_config_style || 'stroke'
   const names = parseName(name, defaultStyle)
   console.log(names)
