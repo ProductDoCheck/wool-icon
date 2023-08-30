@@ -37,6 +37,20 @@ function optimizing(svg) {
         }
       },
       {
+        name: "removeAttributesBySelector",
+        params: {
+          selector: `[fill="#1C274D"]`,
+          attributes: ["fill"]
+        }
+      },
+      {
+        name: "removeAttributesBySelector",
+        params: {
+          selector: `[fill="#1C274C"]`,
+          attributes: ["fill"]
+        }
+      },
+      {
         name: "removeTitle",
         params: true,
       }
